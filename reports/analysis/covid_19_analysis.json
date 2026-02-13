@@ -1,0 +1,206 @@
+{
+  "train": {
+    "dataset_name": "covid_19",
+    "split": "train",
+    "basic_stats": {
+      "num_samples": 3988,
+      "num_features": 4,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "date"
+      ],
+      "memory_usage_mb": 2.037616729736328
+    },
+    "label_distribution": {
+      "counts": {
+        "0": 3244,
+        "1": 744
+      },
+      "percentages": {
+        "0": 81.34403209628887,
+        "1": 18.655967903711137
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 4.360215053763441
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 331.95210631895685,
+        "median": 343.0,
+        "std": 223.84854706284943,
+        "min": 10,
+        "max": 854,
+        "quantiles": {
+          "25%": 112.0,
+          "75%": 548.0,
+          "95%": 587.0
+        }
+      },
+      "word_count": {
+        "mean": 53.02582748244734,
+        "median": 54.0,
+        "std": 36.188157300572286,
+        "min": 1,
+        "max": 144,
+        "quantiles": {
+          "25%": 18.0,
+          "75%": 88.25,
+          "95%": 97.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "text": 0,
+        "label": 0,
+        "source": 0,
+        "date": 3183
+      },
+      "percentages": {
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0,
+        "date": 79.81444332998997
+      },
+      "total_missing": 3183
+    }
+  },
+  "validation": {
+    "dataset_name": "covid_19",
+    "split": "validation",
+    "basic_stats": {
+      "num_samples": 499,
+      "num_features": 4,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "date"
+      ],
+      "memory_usage_mb": 0.2680549621582031
+    },
+    "label_distribution": {
+      "counts": {
+        "0": 404,
+        "1": 95
+      },
+      "percentages": {
+        "0": 80.96192384769539,
+        "1": 19.03807615230461
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 4.252631578947368
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 351.7434869739479,
+        "median": 521.0,
+        "std": 222.53967276980367,
+        "min": 18,
+        "max": 662,
+        "quantiles": {
+          "25%": 122.5,
+          "75%": 550.0,
+          "95%": 591.0999999999999
+        }
+      },
+      "word_count": {
+        "mean": 56.49498997995992,
+        "median": 78.0,
+        "std": 36.23303473592294,
+        "min": 3,
+        "max": 124,
+        "quantiles": {
+          "25%": 20.0,
+          "75%": 90.0,
+          "95%": 98.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "text": 0,
+        "label": 0,
+        "source": 0,
+        "date": 396
+      },
+      "percentages": {
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0,
+        "date": 79.35871743486975
+      },
+      "total_missing": 396
+    }
+  },
+  "test": {
+    "dataset_name": "covid_19",
+    "split": "test",
+    "basic_stats": {
+      "num_samples": 499,
+      "num_features": 4,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "date"
+      ],
+      "memory_usage_mb": 0.2631711959838867
+    },
+    "label_distribution": {
+      "counts": {
+        "0": 416,
+        "1": 83
+      },
+      "percentages": {
+        "0": 83.36673346693387,
+        "1": 16.63326653306613
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 5.0120481927710845
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 354.64729458917833,
+        "median": 517.0,
+        "std": 219.58280049399713,
+        "min": 17,
+        "max": 702,
+        "quantiles": {
+          "25%": 124.0,
+          "75%": 549.0,
+          "95%": 578.0
+        }
+      },
+      "word_count": {
+        "mean": 56.87174348697395,
+        "median": 78.0,
+        "std": 35.49715163591843,
+        "min": 3,
+        "max": 109,
+        "quantiles": {
+          "25%": 20.0,
+          "75%": 89.0,
+          "95%": 97.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "text": 0,
+        "label": 0,
+        "source": 0,
+        "date": 401
+      },
+      "percentages": {
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0,
+        "date": 80.36072144288578
+      },
+      "total_missing": 401
+    }
+  }
+}

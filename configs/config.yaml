@@ -1,0 +1,206 @@
+# Configuration file for Language Model Fine-Tuning Project
+
+# Project paths
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  data_combined: "data/combined"
+  models: "models"
+  logs: "logs"
+  reports: "reports"
+  checkpoints: "models/checkpoints"
+
+# Dataset configuration
+datasets:
+  liar:
+    name: "liar"
+    huggingface_id: "liar"
+    text_column: "statement"
+    label_column: "label"
+    description: "Political statements dataset"
+
+  covid_19:
+    name: "covid_19"
+    huggingface_id: "Ar4ikov/twitter_covid_19_fake_news_dataset_extended"
+    text_column: "text"
+    label_column: "label"
+    description: "COVID-19 misinformation"
+
+  fakenewsnet:
+    name: "fakenewsnet"
+    huggingface_id: "GonzaloA/fake_news"
+    text_column: "text"
+    label_column: "label"
+    description: "Fake news articles"
+
+  fever_data:
+    name: "fever_data"
+    huggingface_id: "fever"
+    subset: "v1.0"
+    text_column: "claim"
+    label_column: "label"
+    description: "Fact verification dataset"
+
+# Data processing
+data_processing:
+  max_length: 512
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+
+  # Label harmonization
+  label_mapping:
+    # General / FakeNewsNet / COVID-19
+    true: 0
+    real: 0
+    false: 1
+    fake: 1
+
+    # FEVER Dataset
+    supported: 0
+    refuted: 1
+    not enough info: 1  # treat as Fake for binary
+
+    # LIAR Dataset specific labels
+    mostly-true: 0
+    half-true: 1
+    barely-true: 1
+    pants-fire: 1
+
+  # Dataset combination strategies
+  combination:
+    strategy: "balanced"  # Options: concatenate, balanced, stratified
+    balance_method: "oversample"  # Options: oversample, undersample
+    min_samples_per_class: 1000
+
+# Model configuration
+models:
+  finbert:
+    name: "ProsusAI/finbert"
+    num_labels: 2
+    max_length: 256            # Փոխվել է 512-ից 256 (ավելի արագ է, սովորաբար բավարար)
+    output_dir: "models/finbert"
+    # Anti-overfitting պարամետրեր
+    hidden_dropout_prob: 0.2
+    attention_probs_dropout_prob: 0.2
+
+  roberta:
+    name: "roberta-base"
+    num_labels: 2
+    max_length: 256            # Փոխվել է 512-ից 256
+    output_dir: "models/roberta"
+    # Anti-overfitting պարամետրեր
+    hidden_dropout_prob: 0.2
+    attention_probs_dropout_prob: 0.2
+
+# Training configuration
+training:
+  # General settings
+  batch_size: 32               # 16-ից դարձավ 32 (ավելի կայուն)
+  gradient_accumulation_steps: 1
+  num_epochs: 8                # 5-ից դարձավ 8 (dropout բարձրացնելու դեպքում ավելի երկար սովորում է)
+  learning_rate: 2.0e-5        # Ստանդարտ լավ LR
+  weight_decay: 0.01           # Anti-overfitting
+  warmup_ratio: 0.1
+  max_grad_norm: 1.0
+  fp16: true                   # Mixed precision, եթե GPU-ն աջակցում է
+
+  # Optimizer
+  optimizer: "adamw"
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-8
+
+  # Learning rate scheduler
+  lr_scheduler_type: "linear"
+
+  # Early stopping
+  early_stopping:
+    enabled: true
+    patience: 3
+    min_delta: 0.001
+    monitor: "eval_f1"
+
+  # Checkpointing
+  checkpointing:
+    save_steps: 500
+    save_total_limit: 3
+    save_best_only: true
+    metric_for_best_model: "eval_f1"
+    greater_is_better: true
+
+  # Evaluation
+  evaluation:
+    strategy: "steps"
+    steps: 500
+
+  # Logging
+  logging:
+    steps: 100
+    report_to: ["tensorboard"]
+
+  # Random seeds
+  seed: 42
+
+# Evaluation metrics
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - confusion_matrix
+
+  # Classification report
+  average: "weighted"  # Options: micro, macro, weighted
+
+# Visualization
+visualization:
+  dpi: 300
+  figure_format: "png"
+  style: "seaborn-v0_8-darkgrid"
+  palette: "husl"
+
+  # Plot settings
+  plots:
+    class_distribution: true
+    text_length_distribution: true
+    word_cloud: true
+    label_correlation: true
+    training_curves: true
+    confusion_matrix: true
+    roc_curve: true
+
+# Logging
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/training.log"
+  console: true
+
+# Hardware
+hardware:
+  device: "cuda"  # Options: cuda, cpu, mps (for Mac M1/M2)
+  num_workers: 4
+  pin_memory: true
+
+# Experiment tracking
+experiment:
+  name: "llm-misinformation-detection"
+  description: "Fine-tuning FinBERT and RoBERTa for misinformation detection"
+  tags:
+    - fake-news
+    - misinformation
+    - fine-tuning
+    - bert
+
+  # Wandb config (optional)
+  wandb:
+    enabled: false
+    project: "llm-fine-tuning"
+    entity: null  # Your wandb username
+
+# Reproducibility
+reproducibility:
+  deterministic: true
+  benchmark: false

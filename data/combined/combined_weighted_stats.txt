@@ -1,0 +1,1 @@
+{'total': 20309, 'distribution': {0: 10156, 1: 10153}, 'sources': {'liar_train': 6446, 'fakenewsnet_gossipcop': 4984, 'fever_train': 3212, 'covid19': 1831, 'fever_dev': 1286, 'liar_test': 898, 'liar_valid': 837, 'fakenewsnet_politifact': 815}}

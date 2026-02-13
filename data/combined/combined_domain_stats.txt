@@ -1,0 +1,4 @@
+total_samples: 90243
+columns: ['id', 'label', 'statement', 'subject', 'speaker', 'job_title', 'state_info', 'party_affiliation', 'barely_true_counts', 'false_counts', 'half_true_counts', 'mostly_true_counts', 'pants_on_fire_counts', 'context', 'dataset', 'text', 'binary_label', 'domain', 'news_url', 'title', 'tweet_ids', 'Unnamed: 0', 'type', 'fact_check_url', 'archieve', 'news_url2', 'news_url3', 'news_url4', 'news_url5', 'newstitle', 'content', 'abstract', 'publish_date', 'meta_keywords', 'verifiable', 'claim', 'evidence']
+label_distribution: {1: 45245, 0: 44998}
+source_datasets: {}

@@ -1,0 +1,4 @@
+total_samples: 150767
+columns: ['text', 'binary_label', 'dataset', 'source_dataset']
+label_distribution: {1: 102245, 0: 48522}
+source_datasets: {'fever_train': 102292, 'fakenewsnet_gossipcop': 20698, 'fever_dev': 13086, 'liar_train': 10223, 'liar_valid': 1279, 'liar_test': 1263, 'fakenewsnet_politifact': 979, 'covid19': 947}

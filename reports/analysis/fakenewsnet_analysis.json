@@ -1,0 +1,215 @@
+{
+  "train": {
+    "dataset_name": "fakenewsnet",
+    "split": "train",
+    "basic_stats": {
+      "num_samples": 24353,
+      "num_features": 5,
+      "columns": [
+        "Unnamed: 0",
+        "title",
+        "text",
+        "label",
+        "source"
+      ],
+      "memory_usage_mb": 81.14882850646973
+    },
+    "label_distribution": {
+      "counts": {
+        "1": 13195,
+        "0": 11158
+      },
+      "percentages": {
+        "1": 54.182236274791606,
+        "0": 45.817763725208394
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 1.1825595984943538
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 2475.378762370139,
+        "median": 2209.0,
+        "std": 2056.360922565028,
+        "min": 2,
+        "max": 49705,
+        "quantiles": {
+          "25%": 1265.0,
+          "75%": 3117.0,
+          "95%": 5544.0
+        }
+      },
+      "word_count": {
+        "mean": 406.45082741346033,
+        "median": 365.0,
+        "std": 334.6641250569112,
+        "min": 0,
+        "max": 7209,
+        "quantiles": {
+          "25%": 208.0,
+          "75%": 515.0,
+          "95%": 901.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "Unnamed: 0": 0,
+        "title": 0,
+        "text": 0,
+        "label": 0,
+        "source": 0
+      },
+      "percentages": {
+        "Unnamed: 0": 0.0,
+        "title": 0.0,
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0
+      },
+      "total_missing": 0
+    }
+  },
+  "validation": {
+    "dataset_name": "fakenewsnet",
+    "split": "validation",
+    "basic_stats": {
+      "num_samples": 8117,
+      "num_features": 5,
+      "columns": [
+        "Unnamed: 0",
+        "title",
+        "text",
+        "label",
+        "source"
+      ],
+      "memory_usage_mb": 27.00392436981201
+    },
+    "label_distribution": {
+      "counts": {
+        "1": 4394,
+        "0": 3723
+      },
+      "percentages": {
+        "1": 54.13330048047308,
+        "0": 45.86669951952692
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 1.1802309965081923
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 2489.4104964888506,
+        "median": 2217.0,
+        "std": 2093.6170050071746,
+        "min": 1,
+        "max": 36695,
+        "quantiles": {
+          "25%": 1289.0,
+          "75%": 3075.0,
+          "95%": 5620.4
+        }
+      },
+      "word_count": {
+        "mean": 409.33534557102377,
+        "median": 366.0,
+        "std": 343.49438203064335,
+        "min": 0,
+        "max": 5797,
+        "quantiles": {
+          "25%": 213.0,
+          "75%": 506.0,
+          "95%": 916.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "Unnamed: 0": 0,
+        "title": 0,
+        "text": 0,
+        "label": 0,
+        "source": 0
+      },
+      "percentages": {
+        "Unnamed: 0": 0.0,
+        "title": 0.0,
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0
+      },
+      "total_missing": 0
+    }
+  },
+  "test": {
+    "dataset_name": "fakenewsnet",
+    "split": "test",
+    "basic_stats": {
+      "num_samples": 8117,
+      "num_features": 5,
+      "columns": [
+        "Unnamed: 0",
+        "title",
+        "text",
+        "label",
+        "source"
+      ],
+      "memory_usage_mb": 26.993459701538086
+    },
+    "label_distribution": {
+      "counts": {
+        "1": 4335,
+        "0": 3782
+      },
+      "percentages": {
+        "1": 53.406430947394355,
+        "0": 46.593569052605645
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 1.1462189317821259
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 2500.1095232228654,
+        "median": 2241.0,
+        "std": 2092.50786169633,
+        "min": 4,
+        "max": 51794,
+        "quantiles": {
+          "25%": 1318.0,
+          "75%": 3129.0,
+          "95%": 5500.4
+        }
+      },
+      "word_count": {
+        "mean": 410.85437969693237,
+        "median": 372.0,
+        "std": 342.6770187314628,
+        "min": 1,
+        "max": 8135,
+        "quantiles": {
+          "25%": 216.0,
+          "75%": 517.0,
+          "95%": 903.1999999999998
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "Unnamed: 0": 0,
+        "title": 0,
+        "text": 0,
+        "label": 0,
+        "source": 0
+      },
+      "percentages": {
+        "Unnamed: 0": 0.0,
+        "title": 0.0,
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0
+      },
+      "total_missing": 0
+    }
+  }
+}

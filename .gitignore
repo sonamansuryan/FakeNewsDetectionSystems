@@ -1,0 +1,103 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Data files (large)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/combined/*.csv
+!data/combined/.gitkeep
+
+# Model files (large)
+outputs/models/*
+!outputs/models/.gitkeep
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Logs
+outputs/logs/*.log
+*.log
+
+# Cache
+cache/
+.cache/
+*.cache
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Environment variables
+.env
+.env.local
+
+# Large files
+*.h5
+*.pkl
+*.pickle
+
+# Keep folder structure
+!data/raw/liar/.gitkeep
+!data/raw/covid19/.gitkeep
+!data/raw/fakenewsnet/.gitkeep
+!data/raw/fever/.gitkeep
+!outputs/figures/.gitkeep

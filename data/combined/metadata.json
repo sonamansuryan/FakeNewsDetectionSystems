@@ -1,0 +1,19 @@
+{
+  "source_datasets": [
+    "covid_19",
+    "fakenewsnet",
+    "fever",
+    "liar"
+  ],
+  "splits": {
+    "train": {
+      "num_samples": 11165
+    },
+    "validation": {
+      "num_samples": 1596
+    },
+    "test": {
+      "num_samples": 3191
+    }
+  }
+}

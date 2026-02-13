@@ -1,0 +1,31 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "names": [
+        "real",
+        "fake"
+      ],
+      "_type": "ClassLabel"
+    },
+    "source": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "date": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "title": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
