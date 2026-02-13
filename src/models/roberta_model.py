@@ -1,8 +1,4 @@
-"""
-RoBERTa Fine-Tuning Module - OPTIMIZED & YAML INTEGRATED
-Optimized for RTX 4070 8GB with Mixed Precision Training
-Reads configuration directly from config.yaml
-"""
+""" RoBERTa model """
 
 import pandas as pd
 import numpy as np

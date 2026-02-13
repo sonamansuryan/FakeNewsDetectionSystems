@@ -5,7 +5,7 @@ Main pipeline script to run all three tasks sequentially.
 This script orchestrates the complete workflow:
 1. Dataset Exploration & Analysis
 2. Dataset Combination
-3. Model Fine-Tuning (FineBERT and RoBERTa)
+3. Model Fine-Tuning (FinBERT and RoBERTa)
 """
 
 import os

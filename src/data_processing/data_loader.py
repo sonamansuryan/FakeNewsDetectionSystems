@@ -1,4 +1,4 @@
-"""Dataset loading utilities (multi-format version)."""
+"""Dataset loading utilities."""
 
 import os
 import yaml

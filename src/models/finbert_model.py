@@ -1,4 +1,4 @@
-"""FinBERT model wrapper."""
+"""FinBERT model."""
 
 import torch
 import yaml
