@@ -94,7 +94,7 @@ Input (Article / Claim / URL)
         │
         ▼
   ┌─────────────┐
-  │ Preprocessing│  — Tokenization, cleaning, metadata extraction
+  │Preprocessing│  — Tokenization, cleaning, metadata extraction
   └──────┬──────┘
          │
          ▼
