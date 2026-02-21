@@ -1,4 +1,4 @@
-#  Automated Real-Time Misinformation Detection, Analysis & Correction System
+#  Real-Time Misinformation Detection & Counter-Narrative Generation System
 
 > **Thesis Project** — *Development of an Automated System for Real-Time Detection, Analysis, and Correction of Misinformation*
 
