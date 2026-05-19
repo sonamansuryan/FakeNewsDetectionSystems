@@ -1,0 +1,224 @@
+{
+  "train": {
+    "dataset_name": "liar",
+    "split": "train",
+    "basic_stats": {
+      "num_samples": 10240,
+      "num_features": 6,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "speaker",
+        "subjects",
+        "context"
+      ],
+      "memory_usage_mb": 4.546720504760742
+    },
+    "label_distribution": {
+      "counts": {
+        "0": 5752,
+        "1": 4488
+      },
+      "percentages": {
+        "0": 56.17187500000001,
+        "1": 43.828125
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 1.2816399286987523
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 106.91875,
+        "median": 99.0,
+        "std": 59.917722340992555,
+        "min": 11,
+        "max": 3192,
+        "quantiles": {
+          "25%": 73.0,
+          "75%": 132.25,
+          "95%": 191.0
+        }
+      },
+      "word_count": {
+        "mean": 18.01005859375,
+        "median": 17.0,
+        "std": 9.658571990126202,
+        "min": 2,
+        "max": 467,
+        "quantiles": {
+          "25%": 12.0,
+          "75%": 22.0,
+          "95%": 33.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "text": 0,
+        "label": 0,
+        "source": 0,
+        "speaker": 2,
+        "subjects": 2,
+        "context": 102
+      },
+      "percentages": {
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0,
+        "speaker": 0.01953125,
+        "subjects": 0.01953125,
+        "context": 0.9960937499999999
+      },
+      "total_missing": 106
+    }
+  },
+  "validation": {
+    "dataset_name": "liar",
+    "split": "validation",
+    "basic_stats": {
+      "num_samples": 1284,
+      "num_features": 6,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "speaker",
+        "subjects",
+        "context"
+      ],
+      "memory_usage_mb": 0.5697078704833984
+    },
+    "label_distribution": {
+      "counts": {
+        "0": 668,
+        "1": 616
+      },
+      "percentages": {
+        "0": 52.024922118380054,
+        "1": 47.97507788161994
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 1.0844155844155845
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 106.71261682242991,
+        "median": 99.0,
+        "std": 44.675298236186265,
+        "min": 17,
+        "max": 327,
+        "quantiles": {
+          "25%": 74.0,
+          "75%": 133.25,
+          "95%": 193.0
+        }
+      },
+      "word_count": {
+        "mean": 17.925233644859812,
+        "median": 17.0,
+        "std": 7.701505679730637,
+        "min": 3,
+        "max": 57,
+        "quantiles": {
+          "25%": 12.0,
+          "75%": 22.0,
+          "95%": 32.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "text": 0,
+        "label": 0,
+        "source": 0,
+        "speaker": 0,
+        "subjects": 0,
+        "context": 12
+      },
+      "percentages": {
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0,
+        "speaker": 0.0,
+        "subjects": 0.0,
+        "context": 0.9345794392523363
+      },
+      "total_missing": 12
+    }
+  },
+  "test": {
+    "dataset_name": "liar",
+    "split": "test",
+    "basic_stats": {
+      "num_samples": 1267,
+      "num_features": 6,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "speaker",
+        "subjects",
+        "context"
+      ],
+      "memory_usage_mb": 0.5648708343505859
+    },
+    "label_distribution": {
+      "counts": {
+        "0": 714,
+        "1": 553
+      },
+      "percentages": {
+        "0": 56.353591160220994,
+        "1": 43.646408839779006
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 1.2911392405063291
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 109.57853196527229,
+        "median": 98.0,
+        "std": 98.03103022967046,
+        "min": 12,
+        "max": 2941,
+        "quantiles": {
+          "25%": 74.0,
+          "75%": 133.0,
+          "95%": 190.70000000000005
+        }
+      },
+      "word_count": {
+        "mean": 18.40410418310971,
+        "median": 16.0,
+        "std": 14.892534964751336,
+        "min": 2,
+        "max": 431,
+        "quantiles": {
+          "25%": 12.0,
+          "75%": 23.0,
+          "95%": 32.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "text": 0,
+        "label": 0,
+        "source": 0,
+        "speaker": 0,
+        "subjects": 0,
+        "context": 17
+      },
+      "percentages": {
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0,
+        "speaker": 0.0,
+        "subjects": 0.0,
+        "context": 1.3417521704814523
+      },
+      "total_missing": 17
+    }
+  }
+}

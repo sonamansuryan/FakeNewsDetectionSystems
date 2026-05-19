@@ -1,0 +1,132 @@
+{
+  "train": {
+    "dataset_name": "fever",
+    "split": "train",
+    "basic_stats": {
+      "num_samples": 109810,
+      "num_features": 3,
+      "columns": [
+        "text",
+        "label",
+        "source"
+      ],
+      "memory_usage_mb": 18.310097694396973
+    },
+    "label_distribution": {
+      "counts": {
+        "0": 80035,
+        "1": 29775
+      },
+      "percentages": {
+        "0": 72.88498315271833,
+        "1": 27.11501684728167
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 2.6879932829554996
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 47.56034058828886,
+        "median": 44.0,
+        "std": 20.19123498036128,
+        "min": 11,
+        "max": 614,
+        "quantiles": {
+          "25%": 34.0,
+          "75%": 57.0,
+          "95%": 81.0
+        }
+      },
+      "word_count": {
+        "mean": 8.113924050632912,
+        "median": 8.0,
+        "std": 3.2497775748996474,
+        "min": 2,
+        "max": 65,
+        "quantiles": {
+          "25%": 6.0,
+          "75%": 10.0,
+          "95%": 14.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "text": 0,
+        "label": 0,
+        "source": 0
+      },
+      "percentages": {
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0
+      },
+      "total_missing": 0
+    }
+  },
+  "validation": {
+    "dataset_name": "fever",
+    "split": "validation",
+    "basic_stats": {
+      "num_samples": 13332,
+      "num_features": 3,
+      "columns": [
+        "text",
+        "label",
+        "source"
+      ],
+      "memory_usage_mb": 2.2342653274536133
+    },
+    "label_distribution": {
+      "counts": {
+        "0": 6666,
+        "1": 6666
+      },
+      "percentages": {
+        "0": 50.0,
+        "1": 50.0
+      },
+      "num_classes": 2,
+      "class_balance_ratio": 1.0
+    },
+    "text_statistics": {
+      "char_length": {
+        "mean": 48.465871587158716,
+        "median": 46.0,
+        "std": 18.69280634480801,
+        "min": 13,
+        "max": 200,
+        "quantiles": {
+          "25%": 35.0,
+          "75%": 58.0,
+          "95%": 83.0
+        }
+      },
+      "word_count": {
+        "mean": 8.293729372937294,
+        "median": 8.0,
+        "std": 3.070298252801594,
+        "min": 2,
+        "max": 31,
+        "quantiles": {
+          "25%": 6.0,
+          "75%": 10.0,
+          "95%": 14.0
+        }
+      }
+    },
+    "missing_values": {
+      "counts": {
+        "text": 0,
+        "label": 0,
+        "source": 0
+      },
+      "percentages": {
+        "text": 0.0,
+        "label": 0.0,
+        "source": 0.0
+      },
+      "total_missing": 0
+    }
+  }
+}

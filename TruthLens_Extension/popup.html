@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TruthLens</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text">TruthLens</span>
+    </div>
+    <span class="logo-tag">Triple-Signal AI</span>
+  </header>
+
+  <!-- ── Idle state (no claim yet) ─────────────────────────────────────── -->
+  <section id="state-idle" class="state active">
+    <div class="idle-art">
+      <div class="idle-ring r1"></div>
+      <div class="idle-ring r2"></div>
+      <div class="idle-ring r3"></div>
+      <span class="idle-icon">⬡</span>
+    </div>
+    <p class="idle-title">Select any text</p>
+    <p class="idle-sub">Right-click → <em>Verify with TruthLens AI</em></p>
+  </section>
+
+  <!-- ── Loading state ─────────────────────────────────────────────────── -->
+  <section id="state-loading" class="state">
+    <div class="loader-wrap">
+      <div class="loader-orbit">
+        <div class="loader-dot d1"></div>
+        <div class="loader-dot d2"></div>
+        <div class="loader-dot d3"></div>
+      </div>
+    </div>
+    <p class="loading-title">Analysing claim…</p>
+    <div class="loading-steps">
+      <span class="step active" id="step-roberta">RoBERTa</span>
+      <span class="step-sep">→</span>
+      <span class="step" id="step-rag">RAG</span>
+      <span class="step-sep">→</span>
+      <span class="step" id="step-mistral">Mistral 7B</span>
+    </div>
+    <p class="claim-preview" id="loading-claim"></p>
+  </section>
+
+  <!-- ── Error state ───────────────────────────────────────────────────── -->
+  <section id="state-error" class="state">
+    <div class="error-icon">⚠</div>
+    <p class="error-title">Connection failed</p>
+    <p class="error-msg" id="error-text"></p>
+    <p class="error-hint">Make sure <code>python src/api/app.py</code> is running on port 5000.</p>
+    <button class="btn-retry" id="btn-retry">Retry</button>
+  </section>
+
+  <!-- ── Result state ──────────────────────────────────────────────────── -->
+  <section id="state-result" class="state">
+
+    <!-- Claim -->
+    <div class="claim-box">
+      <span class="claim-label">CLAIM</span>
+      <p class="claim-text" id="result-claim"></p>
+    </div>
+
+    <!-- Verdict banner -->
+    <div class="verdict-banner" id="verdict-banner">
+      <div class="verdict-glow" id="verdict-glow"></div>
+      <span class="verdict-icon" id="verdict-icon"></span>
+      <div class="verdict-body">
+        <span class="verdict-label" id="verdict-label"></span>
+        <span class="verdict-sub"  id="verdict-sub"></span>
+      </div>
+      <span class="verdict-conf" id="verdict-conf"></span>
+    </div>
+
+    <!-- RoBERTa signal -->
+    <div class="signal-row">
+      <span class="signal-name">RoBERTa</span>
+      <span class="signal-val" id="roberta-label"></span>
+      <div class="conf-bar-wrap">
+        <div class="conf-bar" id="roberta-bar"></div>
+      </div>
+      <span class="conf-pct" id="roberta-pct"></span>
+    </div>
+
+    <!-- Manipulation risk -->
+    <div class="risk-card" id="risk-card">
+      <div class="risk-header">
+        <span class="risk-title">Manipulation Risk</span>
+        <span class="risk-badge" id="risk-badge"></span>
+      </div>
+      <p class="risk-reason" id="risk-reason"></p>
+      <div class="risk-bar-wrap">
+        <div class="risk-fill" id="risk-fill"></div>
+      </div>
+    </div>
+
+    <!-- AI Reasoning -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-icon">🤖</span>
+        <span class="section-title">AI Reasoning</span>
+      </div>
+      <p class="section-body" id="ai-reasoning"></p>
+    </div>
+
+    <!-- Counter-narrative -->
+    <div class="section-block counter-block">
+      <div class="section-header">
+        <span class="section-icon">💡</span>
+        <span class="section-title">Counter-Narrative</span>
+      </div>
+      <p class="section-body" id="counter-narrative"></p>
+    </div>
+
+    <!-- Sources -->
+    <div class="section-block" id="sources-block">
+      <div class="section-header">
+        <span class="section-icon">🌐</span>
+        <span class="section-title">Sources</span>
+      </div>
+      <ul class="sources-list" id="sources-list"></ul>
+    </div>
+
+    <!-- Footer actions -->
+    <div class="result-footer">
+      <button class="btn-new" id="btn-new">← New check</button>
+      <button class="btn-copy" id="btn-copy">Copy report</button>
+    </div>
+
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>

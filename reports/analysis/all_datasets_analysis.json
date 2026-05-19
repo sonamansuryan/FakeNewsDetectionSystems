@@ -1,0 +1,779 @@
+{
+  "liar": {
+    "train": {
+      "dataset_name": "liar",
+      "split": "train",
+      "basic_stats": {
+        "num_samples": 10240,
+        "num_features": 6,
+        "columns": [
+          "text",
+          "label",
+          "source",
+          "speaker",
+          "subjects",
+          "context"
+        ],
+        "memory_usage_mb": 4.546720504760742
+      },
+      "label_distribution": {
+        "counts": {
+          "0": 5752,
+          "1": 4488
+        },
+        "percentages": {
+          "0": 56.17187500000001,
+          "1": 43.828125
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 1.2816399286987523
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 106.91875,
+          "median": 99.0,
+          "std": 59.917722340992555,
+          "min": 11,
+          "max": 3192,
+          "quantiles": {
+            "25%": 73.0,
+            "75%": 132.25,
+            "95%": 191.0
+          }
+        },
+        "word_count": {
+          "mean": 18.01005859375,
+          "median": 17.0,
+          "std": 9.658571990126202,
+          "min": 2,
+          "max": 467,
+          "quantiles": {
+            "25%": 12.0,
+            "75%": 22.0,
+            "95%": 33.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "text": 0,
+          "label": 0,
+          "source": 0,
+          "speaker": 2,
+          "subjects": 2,
+          "context": 102
+        },
+        "percentages": {
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0,
+          "speaker": 0.01953125,
+          "subjects": 0.01953125,
+          "context": 0.9960937499999999
+        },
+        "total_missing": 106
+      }
+    },
+    "validation": {
+      "dataset_name": "liar",
+      "split": "validation",
+      "basic_stats": {
+        "num_samples": 1284,
+        "num_features": 6,
+        "columns": [
+          "text",
+          "label",
+          "source",
+          "speaker",
+          "subjects",
+          "context"
+        ],
+        "memory_usage_mb": 0.5697078704833984
+      },
+      "label_distribution": {
+        "counts": {
+          "0": 668,
+          "1": 616
+        },
+        "percentages": {
+          "0": 52.024922118380054,
+          "1": 47.97507788161994
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 1.0844155844155845
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 106.71261682242991,
+          "median": 99.0,
+          "std": 44.675298236186265,
+          "min": 17,
+          "max": 327,
+          "quantiles": {
+            "25%": 74.0,
+            "75%": 133.25,
+            "95%": 193.0
+          }
+        },
+        "word_count": {
+          "mean": 17.925233644859812,
+          "median": 17.0,
+          "std": 7.701505679730637,
+          "min": 3,
+          "max": 57,
+          "quantiles": {
+            "25%": 12.0,
+            "75%": 22.0,
+            "95%": 32.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "text": 0,
+          "label": 0,
+          "source": 0,
+          "speaker": 0,
+          "subjects": 0,
+          "context": 12
+        },
+        "percentages": {
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0,
+          "speaker": 0.0,
+          "subjects": 0.0,
+          "context": 0.9345794392523363
+        },
+        "total_missing": 12
+      }
+    },
+    "test": {
+      "dataset_name": "liar",
+      "split": "test",
+      "basic_stats": {
+        "num_samples": 1267,
+        "num_features": 6,
+        "columns": [
+          "text",
+          "label",
+          "source",
+          "speaker",
+          "subjects",
+          "context"
+        ],
+        "memory_usage_mb": 0.5648708343505859
+      },
+      "label_distribution": {
+        "counts": {
+          "0": 714,
+          "1": 553
+        },
+        "percentages": {
+          "0": 56.353591160220994,
+          "1": 43.646408839779006
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 1.2911392405063291
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 109.57853196527229,
+          "median": 98.0,
+          "std": 98.03103022967046,
+          "min": 12,
+          "max": 2941,
+          "quantiles": {
+            "25%": 74.0,
+            "75%": 133.0,
+            "95%": 190.70000000000005
+          }
+        },
+        "word_count": {
+          "mean": 18.40410418310971,
+          "median": 16.0,
+          "std": 14.892534964751336,
+          "min": 2,
+          "max": 431,
+          "quantiles": {
+            "25%": 12.0,
+            "75%": 23.0,
+            "95%": 32.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "text": 0,
+          "label": 0,
+          "source": 0,
+          "speaker": 0,
+          "subjects": 0,
+          "context": 17
+        },
+        "percentages": {
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0,
+          "speaker": 0.0,
+          "subjects": 0.0,
+          "context": 1.3417521704814523
+        },
+        "total_missing": 17
+      }
+    }
+  },
+  "covid_19": {
+    "train": {
+      "dataset_name": "covid_19",
+      "split": "train",
+      "basic_stats": {
+        "num_samples": 3988,
+        "num_features": 4,
+        "columns": [
+          "text",
+          "label",
+          "source",
+          "date"
+        ],
+        "memory_usage_mb": 2.037616729736328
+      },
+      "label_distribution": {
+        "counts": {
+          "0": 3244,
+          "1": 744
+        },
+        "percentages": {
+          "0": 81.34403209628887,
+          "1": 18.655967903711137
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 4.360215053763441
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 331.95210631895685,
+          "median": 343.0,
+          "std": 223.84854706284943,
+          "min": 10,
+          "max": 854,
+          "quantiles": {
+            "25%": 112.0,
+            "75%": 548.0,
+            "95%": 587.0
+          }
+        },
+        "word_count": {
+          "mean": 53.02582748244734,
+          "median": 54.0,
+          "std": 36.188157300572286,
+          "min": 1,
+          "max": 144,
+          "quantiles": {
+            "25%": 18.0,
+            "75%": 88.25,
+            "95%": 97.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "text": 0,
+          "label": 0,
+          "source": 0,
+          "date": 3183
+        },
+        "percentages": {
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0,
+          "date": 79.81444332998997
+        },
+        "total_missing": 3183
+      }
+    },
+    "validation": {
+      "dataset_name": "covid_19",
+      "split": "validation",
+      "basic_stats": {
+        "num_samples": 499,
+        "num_features": 4,
+        "columns": [
+          "text",
+          "label",
+          "source",
+          "date"
+        ],
+        "memory_usage_mb": 0.2680549621582031
+      },
+      "label_distribution": {
+        "counts": {
+          "0": 404,
+          "1": 95
+        },
+        "percentages": {
+          "0": 80.96192384769539,
+          "1": 19.03807615230461
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 4.252631578947368
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 351.7434869739479,
+          "median": 521.0,
+          "std": 222.53967276980367,
+          "min": 18,
+          "max": 662,
+          "quantiles": {
+            "25%": 122.5,
+            "75%": 550.0,
+            "95%": 591.0999999999999
+          }
+        },
+        "word_count": {
+          "mean": 56.49498997995992,
+          "median": 78.0,
+          "std": 36.23303473592294,
+          "min": 3,
+          "max": 124,
+          "quantiles": {
+            "25%": 20.0,
+            "75%": 90.0,
+            "95%": 98.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "text": 0,
+          "label": 0,
+          "source": 0,
+          "date": 396
+        },
+        "percentages": {
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0,
+          "date": 79.35871743486975
+        },
+        "total_missing": 396
+      }
+    },
+    "test": {
+      "dataset_name": "covid_19",
+      "split": "test",
+      "basic_stats": {
+        "num_samples": 499,
+        "num_features": 4,
+        "columns": [
+          "text",
+          "label",
+          "source",
+          "date"
+        ],
+        "memory_usage_mb": 0.2631711959838867
+      },
+      "label_distribution": {
+        "counts": {
+          "0": 416,
+          "1": 83
+        },
+        "percentages": {
+          "0": 83.36673346693387,
+          "1": 16.63326653306613
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 5.0120481927710845
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 354.64729458917833,
+          "median": 517.0,
+          "std": 219.58280049399713,
+          "min": 17,
+          "max": 702,
+          "quantiles": {
+            "25%": 124.0,
+            "75%": 549.0,
+            "95%": 578.0
+          }
+        },
+        "word_count": {
+          "mean": 56.87174348697395,
+          "median": 78.0,
+          "std": 35.49715163591843,
+          "min": 3,
+          "max": 109,
+          "quantiles": {
+            "25%": 20.0,
+            "75%": 89.0,
+            "95%": 97.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "text": 0,
+          "label": 0,
+          "source": 0,
+          "date": 401
+        },
+        "percentages": {
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0,
+          "date": 80.36072144288578
+        },
+        "total_missing": 401
+      }
+    }
+  },
+  "fakenewsnet": {
+    "train": {
+      "dataset_name": "fakenewsnet",
+      "split": "train",
+      "basic_stats": {
+        "num_samples": 24353,
+        "num_features": 5,
+        "columns": [
+          "Unnamed: 0",
+          "title",
+          "text",
+          "label",
+          "source"
+        ],
+        "memory_usage_mb": 81.14882850646973
+      },
+      "label_distribution": {
+        "counts": {
+          "1": 13195,
+          "0": 11158
+        },
+        "percentages": {
+          "1": 54.182236274791606,
+          "0": 45.817763725208394
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 1.1825595984943538
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 2475.378762370139,
+          "median": 2209.0,
+          "std": 2056.360922565028,
+          "min": 2,
+          "max": 49705,
+          "quantiles": {
+            "25%": 1265.0,
+            "75%": 3117.0,
+            "95%": 5544.0
+          }
+        },
+        "word_count": {
+          "mean": 406.45082741346033,
+          "median": 365.0,
+          "std": 334.6641250569112,
+          "min": 0,
+          "max": 7209,
+          "quantiles": {
+            "25%": 208.0,
+            "75%": 515.0,
+            "95%": 901.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "Unnamed: 0": 0,
+          "title": 0,
+          "text": 0,
+          "label": 0,
+          "source": 0
+        },
+        "percentages": {
+          "Unnamed: 0": 0.0,
+          "title": 0.0,
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0
+        },
+        "total_missing": 0
+      }
+    },
+    "validation": {
+      "dataset_name": "fakenewsnet",
+      "split": "validation",
+      "basic_stats": {
+        "num_samples": 8117,
+        "num_features": 5,
+        "columns": [
+          "Unnamed: 0",
+          "title",
+          "text",
+          "label",
+          "source"
+        ],
+        "memory_usage_mb": 27.00392436981201
+      },
+      "label_distribution": {
+        "counts": {
+          "1": 4394,
+          "0": 3723
+        },
+        "percentages": {
+          "1": 54.13330048047308,
+          "0": 45.86669951952692
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 1.1802309965081923
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 2489.4104964888506,
+          "median": 2217.0,
+          "std": 2093.6170050071746,
+          "min": 1,
+          "max": 36695,
+          "quantiles": {
+            "25%": 1289.0,
+            "75%": 3075.0,
+            "95%": 5620.4
+          }
+        },
+        "word_count": {
+          "mean": 409.33534557102377,
+          "median": 366.0,
+          "std": 343.49438203064335,
+          "min": 0,
+          "max": 5797,
+          "quantiles": {
+            "25%": 213.0,
+            "75%": 506.0,
+            "95%": 916.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "Unnamed: 0": 0,
+          "title": 0,
+          "text": 0,
+          "label": 0,
+          "source": 0
+        },
+        "percentages": {
+          "Unnamed: 0": 0.0,
+          "title": 0.0,
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0
+        },
+        "total_missing": 0
+      }
+    },
+    "test": {
+      "dataset_name": "fakenewsnet",
+      "split": "test",
+      "basic_stats": {
+        "num_samples": 8117,
+        "num_features": 5,
+        "columns": [
+          "Unnamed: 0",
+          "title",
+          "text",
+          "label",
+          "source"
+        ],
+        "memory_usage_mb": 26.993459701538086
+      },
+      "label_distribution": {
+        "counts": {
+          "1": 4335,
+          "0": 3782
+        },
+        "percentages": {
+          "1": 53.406430947394355,
+          "0": 46.593569052605645
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 1.1462189317821259
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 2500.1095232228654,
+          "median": 2241.0,
+          "std": 2092.50786169633,
+          "min": 4,
+          "max": 51794,
+          "quantiles": {
+            "25%": 1318.0,
+            "75%": 3129.0,
+            "95%": 5500.4
+          }
+        },
+        "word_count": {
+          "mean": 410.85437969693237,
+          "median": 372.0,
+          "std": 342.6770187314628,
+          "min": 1,
+          "max": 8135,
+          "quantiles": {
+            "25%": 216.0,
+            "75%": 517.0,
+            "95%": 903.1999999999998
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "Unnamed: 0": 0,
+          "title": 0,
+          "text": 0,
+          "label": 0,
+          "source": 0
+        },
+        "percentages": {
+          "Unnamed: 0": 0.0,
+          "title": 0.0,
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0
+        },
+        "total_missing": 0
+      }
+    }
+  },
+  "fever": {
+    "train": {
+      "dataset_name": "fever",
+      "split": "train",
+      "basic_stats": {
+        "num_samples": 109810,
+        "num_features": 3,
+        "columns": [
+          "text",
+          "label",
+          "source"
+        ],
+        "memory_usage_mb": 18.310097694396973
+      },
+      "label_distribution": {
+        "counts": {
+          "0": 80035,
+          "1": 29775
+        },
+        "percentages": {
+          "0": 72.88498315271833,
+          "1": 27.11501684728167
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 2.6879932829554996
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 47.56034058828886,
+          "median": 44.0,
+          "std": 20.19123498036128,
+          "min": 11,
+          "max": 614,
+          "quantiles": {
+            "25%": 34.0,
+            "75%": 57.0,
+            "95%": 81.0
+          }
+        },
+        "word_count": {
+          "mean": 8.113924050632912,
+          "median": 8.0,
+          "std": 3.2497775748996474,
+          "min": 2,
+          "max": 65,
+          "quantiles": {
+            "25%": 6.0,
+            "75%": 10.0,
+            "95%": 14.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "text": 0,
+          "label": 0,
+          "source": 0
+        },
+        "percentages": {
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0
+        },
+        "total_missing": 0
+      }
+    },
+    "validation": {
+      "dataset_name": "fever",
+      "split": "validation",
+      "basic_stats": {
+        "num_samples": 13332,
+        "num_features": 3,
+        "columns": [
+          "text",
+          "label",
+          "source"
+        ],
+        "memory_usage_mb": 2.2342653274536133
+      },
+      "label_distribution": {
+        "counts": {
+          "0": 6666,
+          "1": 6666
+        },
+        "percentages": {
+          "0": 50.0,
+          "1": 50.0
+        },
+        "num_classes": 2,
+        "class_balance_ratio": 1.0
+      },
+      "text_statistics": {
+        "char_length": {
+          "mean": 48.465871587158716,
+          "median": 46.0,
+          "std": 18.69280634480801,
+          "min": 13,
+          "max": 200,
+          "quantiles": {
+            "25%": 35.0,
+            "75%": 58.0,
+            "95%": 83.0
+          }
+        },
+        "word_count": {
+          "mean": 8.293729372937294,
+          "median": 8.0,
+          "std": 3.070298252801594,
+          "min": 2,
+          "max": 31,
+          "quantiles": {
+            "25%": 6.0,
+            "75%": 10.0,
+            "95%": 14.0
+          }
+        }
+      },
+      "missing_values": {
+        "counts": {
+          "text": 0,
+          "label": 0,
+          "source": 0
+        },
+        "percentages": {
+          "text": 0.0,
+          "label": 0.0,
+          "source": 0.0
+        },
+        "total_missing": 0
+      }
+    }
+  }
+}
