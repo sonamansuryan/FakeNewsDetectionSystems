@@ -142,10 +142,10 @@ The system classifies claims across a **7-point spectrum** rather than a binary 
 
 ### Telegram Bot
 <p align="center">
-  <img src="assets/screenshots/tg_bot_fake_verdict.png" width="16%" />
-  <img src="assets/screenshots/tg_bot_fake_reasoning.png" width="16%" />
-  <img src="assets/screenshots/tg_bot_fake_narrative.png" width="16%" />
-  <img src="assets/screenshots/tg_bot_fake_sources.png" width="16%" />
+  <img src="assets/screenshots/tg_bot_fake_verdict.PNG" width="16%" />
+  <img src="assets/screenshots/tg_bot_fake_reasoning.PNG" width="16%" />
+  <img src="assets/screenshots/tg_bot_fake_narrative.PNG" width="16%" />
+  <img src="assets/screenshots/tg_bot_fake_sources.PNG" width="16%" />
 </p>
 <p align="center"><em>From debunking complex misinformation to verifying official news.</em></p>
 
