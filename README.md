@@ -1,34 +1,15 @@
 # 🛡️ TruthLens — Real-Time Fake News Detection System
 
-![alt text](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
-![alt text](https://img.shields.io/badge/PyTorch-2.2%2B-ee4c2c?logo=pytorch&logoColor=white)
-![alt text](https://img.shields.io/badge/Flask-3.x-009688?logo=fastapi&logoColor=white)
-![alt text](https://img.shields.io/badge/Ollama-Mistral_7B-white?logo=ollama&logoColor=white)
-![alt text](https://img.shields.io/badge/Telegram_Bot-Active-26A5E4?logo=telegram&logoColor=white)
-![alt text](https://img.shields.io/badge/Chrome_Extension-V3-4285F4?logo=googlechrome&logoColor=white)
-![alt text](https://img.shields.io/badge/License-MIT-green)
-![alt text](https://img.shields.io/badge/Status-Active-yellow)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.2%2B-ee4c2c?logo=pytorch&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.x-009688?logo=fastapi&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-Mistral_7B-white?logo=ollama&logoColor=white)
+![Telegram Bot](https://img.shields.io/badge/Telegram_Bot-Active-26A5E4?logo=telegram&logoColor=white)
+![Chrome Extension](https://img.shields.io/badge/Chrome_Extension-V3-4285F4?logo=googlechrome&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Active-yellow)
 
 > **Diploma Thesis** — Automated system for real-time detection, analysis, and correction of misinformation using a triple-signal AI pipeline: **Statistical · Fact-Check · Manipulation**.
-
----
-
-## Table of Contents
-
-- [Overview](#-overview)
-- [System Architecture](#-system-architecture)
-- [Verdict Spectrum](#-verdict-spectrum)
-- [Features](#-features)
-- [Demo](#-demo)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Pipeline Deep Dive](#-pipeline-deep-dive)
-- [Models & Performance](#-models--performance)
-- [Interfaces](#-interfaces)
-- [Roadmap](#-roadmap)
-- [License](#-license)
 
 ---
 
@@ -49,11 +30,11 @@ Accessible through **three interfaces**: a Flask web dashboard, a Telegram bot, 
 ## System Architecture
 
 ```
-Input Claim
-     │
-     ▼
+                     Input Claim
+                         │
+                         ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  Signal 1 — Statistical  (RoBERTa / FinBERT)                │
+│  Signal 1 — Statistical  (RoBERTa-base, fine-tuned)         │
 │  Fine-tuned transformer binary classifier                   │
 │  Output: FAKE / REAL  +  confidence score                   │
 └────────────────────────┬────────────────────────────────────┘
@@ -117,7 +98,7 @@ The system classifies claims across a **7-point spectrum** rather than a binary 
 ## Features
 
 - **Triple-signal pipeline** — statistical, fact-check, and manipulation signals synthesized by Mistral 7B into a final spectrum verdict
-- **Fine-tuned transformers** — RoBERTa-base and FinBERT trained on curated fake news datasets
+- **Fine-tuned RoBERTa-base** — selected after comparative evaluation against FinBERT, achieving 81.8% accuracy
 - **Multi-branch RAG** — Wikipedia + DuckDuckGo intent search + active refutation branch (auto-activated for health/scientific/institutional claims)
 - **Adaptive Multi-Intent Retrieval** — Institution Registry maps 30+ organizations (WHO, NASA, NATO, Harvard, EU bodies…) to authoritative domains for targeted `site:<domain>` queries
 - **Political Appointment Branch** — force-fetches precise Wikipedia sections for claims involving governmental roles or dates
@@ -157,7 +138,7 @@ The system classifies claims across a **7-point spectrum** rather than a binary 
 
 | Layer | Technology |
 |-------|-----------|
-| **Statistical Models** | RoBERTa-base (fine-tuned), FinBERT (fine-tuned) |
+| **Statistical Model** | RoBERTa-base (fine-tuned) |
 | **Manipulation Model** | `SamLowe/roberta-base-go_emotions` + custom subjectivity weighting |
 | **LLM Reasoning** | Mistral 7B (via [Ollama](https://ollama.com)) |
 | **RAG / Retrieval** | Wikipedia REST API · DuckDuckGo Search (3-branch) |
@@ -180,7 +161,7 @@ The system classifies claims across a **7-point spectrum** rather than a binary 
 ### 1. Clone
 
 ```bash
-git clone https://github.com/<your-username>/FakeNewsDetectionSystems.git
+git clone https://github.com/sonamansuryan/FakeNewsDetectionSystems.git
 cd FakeNewsDetectionSystems
 ```
 
@@ -230,12 +211,6 @@ python -m src.api.app
 python telegram_bot.py
 ```
 
-### CLI — single claim
-
-```bash
-python predict.py --text "COVID-19 vaccines contain microchips."
-```
-
 ### Full pipeline runner
 
 ```bash
@@ -253,9 +228,9 @@ python run_pipeline.py --claim "Your claim here"
 
 ## Pipeline Deep Dive
 
-### Signal 1 — Statistical (RoBERTa / FinBERT)
+### Signal 1 — Statistical (RoBERTa-base)
 
-Fine-tuned transformer classifiers output a binary FAKE / REAL prediction with a calibrated confidence score. RoBERTa-base is the primary model; FinBERT supplements it for financial and economic misinformation.
+Both RoBERTa-base and FinBERT were fine-tuned and evaluated comparatively. RoBERTa-base was selected as the production model after achieving 81.8% accuracy vs FinBERT's 71.2%. It outputs a binary FAKE / REAL prediction with a calibrated confidence score.
 
 ### Signal 2 — Fact-Check (Multi-Branch RAG)
 
@@ -287,14 +262,18 @@ Mistral 7B (Ollama) receives the claim, all retrieved snippets, and both signal 
 
 ## Models & Performance
 
-### Fine-tuning Results
+### Model Selection: RoBERTa vs FinBERT
 
-| Model | Base | Accuracy | F1 Score | Epochs |
-|-------|------|----------|----------|--------|
-| **RoBERTa** | `roberta-base` | **81.8%** | **81.8%** | 4 |
-| **FinBERT** | `ProsusAI/finbert` | 71.2% | 71.2% | 8 |
+Both models were fine-tuned on the same dataset for direct comparison:
 
-> Pre-trained checkpoints will be hosted on HuggingFace Hub *(links TBD)*.
+| Model | Base | Accuracy | F1 Score | Epochs | Status |
+|-------|------|----------|----------|--------|--------|
+| **RoBERTa** | `roberta-base` | **81.8%** | **81.8%** | 4 | ✅ Production model |
+| FinBERT | `ProsusAI/finbert` | 71.2% | 71.2% | 8 | 🔬 Trained, superseded by RoBERTa |
+
+RoBERTa-base outperformed FinBERT by a significant margin and was selected as the sole statistical signal in the final pipeline. FinBERT's lower performance is expected — it was originally pre-trained on financial text, making it less suited for general fake news classification.
+
+> Model checkpoints hosted on HuggingFace Hub *(links TBD)*.
 
 ### Manipulation Model
 
@@ -320,7 +299,7 @@ Manifest V3 extension with a content script that intercepts selected text. Side 
 ## Roadmap
 
 - [x] Dataset exploration and preprocessing pipeline
-- [x] RoBERTa-base and FinBERT fine-tuning
+- [x] RoBERTa-base and FinBERT fine-tuning + comparative evaluation
 - [x] Multi-branch RAG (Wikipedia + DuckDuckGo + Refutation)
 - [x] Institution Registry + Political Appointment branch
 - [x] GoEmotions-based manipulation detection with linguistic aggression floor
